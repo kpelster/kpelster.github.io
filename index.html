@@ -6,6 +6,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href = "index.css">
 </head>
 
 <body style="
@@ -25,7 +26,7 @@ border-radius: 5px;">
             style="transform: rotate(-10deg); width: 400px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
             <!-- polaroid css from https://www.w3schools.com/css/tryit.asp?filename=trycss_ex_images_card -->
             <img src="pelster_self_pic.JPG" atl="Photo of Kara" width="400px">
-            <img src="pelster_custom_hello.jpg" atl="Hi, I'm Kara!" width="400px">
+            <img src="pelster_custom_hello.jpg" alt="Hi, I'm Kara!" width="400px">
             <!-- <div id="header-name"
                 style="display: flex; width: 400px; height: 125px; background-image: url(pelster_custom_hello.jpg); justify-content: center; align-items: center;">
                 </div> -->
@@ -40,15 +41,13 @@ border-radius: 5px;">
         align-items:flex-end; 
         flex-direction: column; 
         width: 350px;">
-            <div id="main-content" style="height: 600px; margin-right: -50px">
-                <h1 style = "font-weight: 500;letter-spacing: 1px"
+            <div id="main-content" style="height: 600px; margin-right: -75px">
+                <h1 style = "font-weight: 400;letter-spacing: 1px"
                 >CISC474 Personal Page</h1>
                 <div>
-                    <h2 style = "font-weight: 400; letter-spacing: 1px">My Specs</h2>
-                    <ul style = "font-family:system-ui;letter-spacing: 1px">
-                        <li>Full name: Kara Pelster</li>
-                        <li>Call me Kara in class!</li>
-                    </ul>
+                    <h2 style = "font-weight: 300; letter-spacing: 1px">My Specs</h2>
+                    <p style = "margin-bottom: -15px;">Hello! My full name is Kara Pelster.</p>
+                    <p>You can call me Kara (care-uh) in class.</p>
                     <a style="
                     display: inline-flex;
                     margin: 5px; 
@@ -59,9 +58,9 @@ border-radius: 5px;">
                     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
                     width: 125px;
                     color: black;
-                    justify-content: center;" href="#">About Me</a>
-                    <h3 style = "font-weight: 300; font-family:system-ui; font-style:normal; 
-                        letter-spacing: 1px">Web Development Topics of Interest</h3>
+                    justify-content: center;" href="aboutMe.html">About Me</a>
+                    <h2 style = "font-weight: 300; font-family:system-ui; font-style:normal; 
+                        letter-spacing: 1px">Web Development Topics of Interest</h2>
                     <ul style = "font-family:system-ui;letter-spacing: 1px">
                         <li>User interaction</li>
                         <li>Dynamic html building</li>
@@ -101,7 +100,7 @@ border-radius: 5px;">
             box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
             width: 125px;
             justify-content: center;" href="#">Previous Student</a>
-                <a style="
+                <a id = "next" style="
                 color: black;
             display: inline-flex;
             margin: 5px; 
