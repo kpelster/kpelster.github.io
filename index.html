@@ -1,3 +1,58 @@
+<style>
+    #polaroid {
+        transform: rotate(-10deg);
+        width: 400px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+
+    #page-content {
+        display: flex;
+        /* height: 100%; */
+        align-items: flex-end;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        /* width: 350px; */
+    }
+
+    .btn-formatting {
+        color: black;
+        display: inline-flex;
+        margin: 5px;
+        background-color: white;
+        padding: 6px;
+        border-radius: 5px;
+        text-decoration: none !important;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        width: 125px;
+        justify-content: center;
+    }
+
+    .btn-formatting:hover {
+        background-color: #e4e4dd;
+    }
+
+    #home-link {
+        color: black;
+        padding: 20px;
+        display: block;
+        text-align: center;
+        text-decoration: underline;
+        cursor: pointer;
+    }
+
+    #main-content {
+        /* height: 900px;  */
+        width: 500px;
+        /* margin-right: -75px; */
+        padding: 10px;
+        padding-top: 30px;
+    }
+
+    .personal-photo {
+        padding: 5px;
+    }
+</style>
 
 <html lang="en-US">
 
@@ -6,118 +61,62 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href = "index.css">
+    <link rel="stylesheet" href="aboutMe.css">
 </head>
 
 <body style="
-display: flex; 
-align-items:center; 
-justify-content: center;
-font-family: system-ui; 
-background-image: url(images/pelster_custom_background.png); 
-background-size: 100%;
-height: 100%;
-width: 100%;
-border-radius: 5px;">
 
-  
+    display: flex; 
+    flex-direction: column;
+    align-items:center; 
+    justify-content: center;
+    font-family: system-ui; 
+    background-image: url(images/pelster_custom_background.png); 
+    background-size: 100%;
+    /* height: 100%; */
+    width: 100%;
+    border-radius: 5px;">
+
+    <div id="page-content" style="border-bottom: 1px solid black;">
+
+        <div style="padding: 30px; margin-right: 75px; margin-bottom: 50px;">
+            <div id="polaroid">
+                <!-- polaroid css from https://www.w3schools.com/css/tryit.asp?filename=trycss_ex_images_card -->
+                <img src="images/pelster_self_pic.JPG" atl="Photo of Kara" width="400px">
+                <img src="images/pelster_custom_hello.jpg" alt="Hi, I'm Kara!" width="400px">
+            </div>
+        </div>
+
+        <div id="main-content" style="height: 600px; margin-right: -75px">
+            <h1 style="font-weight: 400;letter-spacing: 1px; border-bottom: 1px solid black;">CISC474 Personal Page</h1>
+            <div>
+
+                <h2 style="font-weight: 300; letter-spacing: 1px">My Specs</h2>
+                <p style="margin-bottom: -15px;">Hello! My full name is Kara Pelster.</p>
+                <p>You can call me Kara (care-uh) in class.</p>
+                <a class="btn-formatting" href="aboutMe.html">About Me</a>
+
+                <h2 style="font-weight: 300; font-family:system-ui; font-style:normal; letter-spacing: 1px">Web Development Topics of Interest</h2>
+                <ul style="font-family:system-ui;letter-spacing: 1px">
+                    <li>User interaction</li>
+                    <li>Dynamic html building</li>
+                    <li>Data access and manipulation</li>
+                    <li>Design</li>
+                </ul>
+
+                <a class="btn-formatting" href="https://mattm401.github.io/">CISC474 Site</a>
+            </div>
+        </div>
+
+    </div>
+
+    <div id="student-nav-content" style="padding-top: 10px; padding-bottom: 20px; margin-right: -50px; ">
         <div>
-            <div id="polaroid"
-            style="transform: rotate(-10deg); width: 400px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
-            <!-- polaroid css from https://www.w3schools.com/css/tryit.asp?filename=trycss_ex_images_card -->
-            <img src="images/pelster_self_pic.JPG" atl="Photo of Kara" width="400px">
-            <img src="images/pelster_custom_hello.jpg" alt="Hi, I'm Kara!" width="400px">
-            <!-- <div id="header-name"
-                style="display: flex; width: 400px; height: 125px; background-image: url(pelster_custom_hello.jpg); justify-content: center; align-items: center;">
-                </div> -->
+            <a id=prev class="btn-formatting" href="#">Previous Student</a>
+            <a id="next" class="btn-formatting" href="#">Next Student</a>
         </div>
-        </div>
-        
-
-
-        <div id="page-content" style="
-        display: flex; 
-        height: 100%; 
-        align-items:flex-end; 
-        flex-direction: column; 
-        width: 350px;">
-            <div id="main-content" style="height: 600px; margin-right: -75px">
-                <h1 style = "font-weight: 400;letter-spacing: 1px"
-                >CISC474 Personal Page</h1>
-                <div>
-                    <h2 style = "font-weight: 300; letter-spacing: 1px">My Specs</h2>
-                    <p style = "margin-bottom: -15px;">Hello! My full name is Kara Pelster.</p>
-                    <p>You can call me Kara (care-uh) in class.</p>
-                    <a style="
-                    display: inline-flex;
-                    margin: 5px; 
-                    background-color: white; 
-                    padding: 6px; 
-                    border-radius: 5px; 
-                    text-decoration: none !important;
-                    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-                    width: 125px;
-                    color: black;
-                    justify-content: center;" href="aboutMe.html">About Me</a>
-                    <h2 style = "font-weight: 300; font-family:system-ui; font-style:normal; 
-                        letter-spacing: 1px">Web Development Topics of Interest</h2>
-                    <ul style = "font-family:system-ui;letter-spacing: 1px">
-                        <li>User interaction</li>
-                        <li>Dynamic html building</li>
-                        <li>Data access and manipulation</li>
-                        <li>Design</li>
-                    </ul>
-
-                    <a style="
-            color: black;
-            display: inline-flex;
-            margin: 5px; 
-            background-color: white; 
-            padding: 6px; 
-            border-radius: 5px; 
-            text-decoration: none !important;
-            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-            width: 125px;
-            justify-content: center;" href="https://mattm401.github.io/">CISC474 Site</a>
-
-
-
-                </div>
-            </div>
-
-
-
-
-            <div id="student-nav-content" style="margin-right: -50px;">
-                <a style="
-                color: black;
-            display: inline-flex;
-            margin: 5px; 
-            background-color: white; 
-            padding: 6px; 
-            border-radius: 5px; 
-            text-decoration: none !important;
-            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-            width: 125px;
-            justify-content: center;" href="#">Previous Student</a>
-                <a id = "next" style="
-                color: black;
-            display: inline-flex;
-            margin: 5px; 
-            background-color: white; 
-            padding: 6px; 
-            border-radius: 5px; 
-            text-decoration: none !important;
-            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-            width: 125px;
-            justify-content: center;" href="#">Next Student</a>
-
-            </div>
-
-        </div>
-
-
+    </div>
 
 </body>
 
-</html>
+<!-- </html> -->
