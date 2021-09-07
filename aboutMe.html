@@ -1,4 +1,13 @@
+<!-- 
+Kara Pelster
+CISC474 
+Personal Webpage 1
+aboutMe.html
+-->
+
+<!-- CSS -->
 <style>
+
     #polaroid {
         transform: rotate(-10deg);
         width: 400px;
@@ -21,7 +30,7 @@
         margin: 5px;
         background-color: white;
         padding: 6px;
-        border-radius: 5px;
+        border-radius: 3px;
         text-decoration: none !important;
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
         width: 125px;
@@ -39,6 +48,7 @@
         text-align: center;
         text-decoration: underline;
         cursor: pointer;
+        font-size: large;
     }
 
     #main-content {
@@ -54,6 +64,7 @@
     }
 </style>
 
+<!-- HTML -->
 <html lang="en-US">
 
 <head>
@@ -79,53 +90,74 @@
 
 
     <div id="page-content" style="border-bottom: 1px solid black;">
+
+        <!-- polaroid -->
         <div style="padding: 30px; margin-right: 75px;">
+
             <div id="polaroid">
+
                 <!-- polaroid css from https://www.w3schools.com/css/tryit.asp?filename=trycss_ex_images_card -->
                 <img src="images/aboutMe_self_pic.JPG" atl="Photo of Kara" width="400px">
                 <img src="images/pelster_custom_hello.jpg" atl="Hi, I'm Kara!" width="400px">
-                <!-- <div id="header-name"
-                        style="display: flex; width: 400px; height: 125px; background-image: url(pelster_custom_hello.jpg); justify-content: center; align-items: center;">
-                        </div> -->
+
             </div>
         </div>
 
+        <!-- about me column -->
         <div id="main-content">
+
             <h1 style="font-weight: 400;letter-spacing: 1px; border-bottom: 1px solid black;">About Me</h1>
+                <!-- 
+                Kara Pelster    
+                CISC474
+                kpelster@udel.edu 
+                -->
             <div>
+
+                <!-- intro -->
                 <p>Hello! My name is Kara. I was born in Omaha, Nebraska. I will be graduating
                     December 2021 from the University of Delaware. My major is Computer Science,
                     and I have a minor in chemistry and concentration in computational chemistry.
                 </p>
+
+                <!-- hobbies bullet list -->
                 <span>My hobbies include:</span>
+
                 <ul style="font-family:system-ui;letter-spacing: 1px">
                     <li>Running</li>
                     <li>Golfing</li>
                     <li>Charcoal Drawing</li>
                 </ul>
 
+            <!-- personal photos -->
             </div id="photos-div">
 
             <h2 style="font-weight: 300;letter-spacing: 1px; border-bottom: 1px solid black;">Photos</h2>
+
+            <!-- finn my dog -->
             <h3 style="font-weight: 200; letter-spacing: 1px">My Running Pal, Finn</h3>
             <img class="personal-photo" src="images/finn-ud.jpeg" height="200px">
             <img class="personal-photo" src="images/me-finn.jpeg" height="200px">
 
+            <!-- art -->
             <h3 style="font-weight: 200; letter-spacing: 1px">Some of My Art</h3>
             <img class="personal-photo" src="images/profile.jpg" height="200px">
             <img class="personal-photo" src="images/stairs.jpg" height="200px">
             <img class="personal-photo" src="images/blurry-face.jpg" height="200px">
             <img class="personal-photo" src="images/hand-guitar.jpg" height="200px">
             <img class="personal-photo" src="images/incomplete-face.jpg" height="200px">
-            <div>
 
-            </div>
+
         </div>
+    </div>
 
 
     </div>
 
+    <!-- footer student navigation bar -->
     <div id="student-nav-content" style="padding-top: 10px; margin-right: -50px; ">
+        
+        <!-- student navigation buttons -->
         <div>
             <a id=prev class="btn-formatting" href="#">Previous Student</a>
             <a id="next" class="btn-formatting" href="#">Next Student</a>
@@ -134,7 +166,6 @@
         <div>
             <a id="home-link" href="index.html">Home</a>
         </div>
-
 
     </div>
 

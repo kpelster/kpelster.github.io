@@ -1,3 +1,10 @@
+<!-- 
+Kara Pelster
+CISC474 
+Personal Webpage 1
+index.html
+-->
+
 <style>
     #polaroid {
         transform: rotate(-10deg);
@@ -7,12 +14,10 @@
 
     #page-content {
         display: flex;
-        /* height: 100%; */
         align-items: flex-end;
         justify-content: center;
         align-items: center;
         flex-direction: row;
-        /* width: 350px; */
     }
 
     .btn-formatting {
@@ -21,7 +26,7 @@
         margin: 5px;
         background-color: white;
         padding: 6px;
-        border-radius: 5px;
+        border-radius: 3px;
         text-decoration: none !important;
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
         width: 125px;
@@ -42,9 +47,7 @@
     }
 
     #main-content {
-        /* height: 900px;  */
         width: 500px;
-        /* margin-right: -75px; */
         padding: 10px;
         padding-top: 30px;
     }
@@ -80,6 +83,8 @@
     <div id="page-content" style="border-bottom: 1px solid black;">
 
         <div style="padding: 30px; margin-right: 75px; margin-bottom: 50px;">
+
+            <!-- polaroid column -->
             <div id="polaroid">
                 <!-- polaroid css from https://www.w3schools.com/css/tryit.asp?filename=trycss_ex_images_card -->
                 <img src="images/pelster_self_pic.JPG" atl="Photo of Kara" width="400px">
@@ -88,15 +93,27 @@
         </div>
 
         <div id="main-content" style="height: 600px; margin-right: -75px">
+
+            <!-- main content column -->
             <h1 style="font-weight: 400;letter-spacing: 1px; border-bottom: 1px solid black;">CISC474 Personal Page</h1>
+            <!-- 
+                Kara Pelster    
+                CISC474
+                kpelster@udel.edu 
+                -->
             <div>
 
+                <!-- intro -->
                 <h2 style="font-weight: 300; letter-spacing: 1px">My Specs</h2>
-                <p style="margin-bottom: -15px;">Hello! My full name is Kara Pelster.</p>
-                <p>You can call me Kara (care-uh) in class.</p>
+                <p style="font-size:medium">Hello! My full name is Kara Pelster. <br>
+                    You can call me Kara (care-uh) in class.</p>
+                
+                <!-- link to about me page -->
                 <a class="btn-formatting" href="aboutMe.html">About Me</a>
 
-                <h2 style="font-weight: 300; font-family:system-ui; font-style:normal; letter-spacing: 1px">Web Development Topics of Interest</h2>
+                <!-- web development topics list -->
+                <h2 style="font-weight: 300; font-family:system-ui; font-style:normal; letter-spacing: 1px">Web
+                    Development Topics of Interest</h2>
                 <ul style="font-family:system-ui;letter-spacing: 1px">
                     <li>User interaction</li>
                     <li>Dynamic html building</li>
@@ -104,12 +121,14 @@
                     <li>Design</li>
                 </ul>
 
+                <!-- link to class site -->
                 <a class="btn-formatting" href="https://mattm401.github.io/">CISC474 Site</a>
             </div>
         </div>
 
     </div>
 
+    <!-- student navigation footer -->
     <div id="student-nav-content" style="padding-top: 10px; padding-bottom: 20px; margin-right: -50px; ">
         <div>
             <a id=prev class="btn-formatting" href="#">Previous Student</a>
@@ -118,5 +137,3 @@
     </div>
 
 </body>
-
-<!-- </html> -->
