@@ -29,6 +29,7 @@
 
 .btn-formatting:hover {
     background-color: #e4e4dd;
+    cursor: pointer;
 }
 
 
@@ -93,4 +94,45 @@ body {
 .h1-style{
     font-weight: 400;
     letter-spacing: 1px;
+}
+
+.field-label{
+    float:left;
+    margin-top: 15px;
+}
+
+.field-input{
+    float: right;
+    border-radius: 3px;
+    padding: 7px;
+    margin: 10px;
+    width: 200px;
+    border: 1px solid black;
+}
+
+.field-row{
+    border-bottom: 1px solid black;
+}
+
+#form-content{
+    width: 50%;
+    display: inline-grid;
+}
+
+#contact-content{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#message-box{
+    max-width: 200px;
+}
+
+#submit-form-div{
+    display: flex;
+    justify-content: center;
+    margin: 10px;
 }
