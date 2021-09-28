@@ -51,7 +51,7 @@ body {
     align-items: center;
     justify-content: center;
     font-family: system-ui;
-    background-image: url(images/pelster_custom_background.png);
+    background-image: url(../images/pelster_custom_background.png);
     background-size: 100%;
     width: 100%;
     border-radius: 5px;
@@ -107,7 +107,7 @@ body {
     padding: 7px;
     margin: 10px;
     width: 200px;
-    border: 1px solid black;
+    border: 1px solid white;
 }
 
 .field-row{
@@ -127,7 +127,7 @@ body {
     align-items: center;
 }
 
-#message-box{
+#user_message{
     max-width: 200px;
 }
 
