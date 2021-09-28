@@ -17,10 +17,10 @@
 .btn-formatting {
     color: black;
     display: inline-flex;
-    margin: -5px;
+    /* margin: -5px; */
     background-color: white;
     padding: 6px;
-    /* border-radius: 3px; */
+    border-radius: 3px;
     text-decoration: none !important;
     /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
     width: 125px;
@@ -31,15 +31,6 @@
     background-color: #e4e4dd;
 }
 
-#home-link {
-    color: black;
-    padding: 20px;
-    display: block;
-    text-align: center;
-    text-decoration: underline;
-    cursor: pointer;
-    font-size: large;
-}
 
 .main-content {
     /* height: 900px;  */
@@ -79,32 +70,27 @@ body {
     flex-direction: row;
 }
 
-.btn-formatting {
-    color: black;
-    display: inline-flex;
-    margin: 5px;
-    background-color: white;
-    padding: 6px;
-    border-radius: 3px;
-    text-decoration: none !important;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    width: 125px;
-    justify-content: center;
-}
 
-.btn-formatting:hover {
-    background-color: #e4e4dd;
-}
-
-#home-link {
+/* .home-link {
     color: black;
     padding: 20px;
     display: block;
     text-align: center;
     text-decoration: underline;
     cursor: pointer;
-}
+} */
 
 .personal-photo {
     padding: 5px;
+}
+
+.page-nav-ribbon{
+    background-color: white;
+    padding: 5px;
+    border-radius: 3px;
+}
+
+.h1-style{
+    font-weight: 400;
+    letter-spacing: 1px;
 }
