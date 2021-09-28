@@ -129,6 +129,8 @@ body {
 
 #user_message{
     max-width: 200px;
+    height:fit-content;
+    resize: vertical;
 }
 
 #submit-form-div{

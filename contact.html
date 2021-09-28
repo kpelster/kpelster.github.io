@@ -14,7 +14,7 @@ contact.html
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/style.css">
-    <script src = "/src/index.js"></script>
+    <script src = "src/index.js"></script>
     <title>Contact Me</title>
 </head>
 
@@ -45,28 +45,32 @@ contact.html
 
         <div id = "form-content">
             <div class = "field-row" id = "first-name">
-                <label class = "field-label">First Name</label>
+                <label class = "field-label">First Name*</label>
+
                 <input class = "field-input" id = "user_fname">
             </div>
             <div class = "field-row" id = "last-name">
-                <label class = "field-label">Last Name</label>
+                <label class = "field-label">Last Name*</label>
                 <input class = "field-input" id = "user_lname">
             </div>
             <div class = "field-row" id = "email">
-                <label class = "field-label">Email Address</label>
+                <label class = "field-label">Email Address*</label>
                 <input class = "field-input" id = "user_email">
             </div>
             <div class = "field-row" id = "phone">
-                <label class = "field-label">Phone Number</label>
-                <input class = "field-input" id = "user_phone">
+                <label class = "field-label">Phone Number*</label>
+                <label id = "phone-error"></label>
+                <input class = "field-input" id = "user_phone" placeholder = "XXX-XXX-XXXX">
             </div>
             <div class = "field-row" id = "message">
-                <label class = "field-label">Message</label>
+                <label class = "field-label">Message*</label>
                 <textarea id = "user_message" class = "field-input" ></textarea>
             </div>
+            <label style = "font-size: smaller;">* Required Fields</label>
             <div id = "submit-form-div">
-                <a type = "button" class = "btn-formatting" id = "submit-form-btn">Submit</a>
+                <a type = "button" onclick = "validate()" class = "btn-formatting" id = "submit-form-btn">Submit</a>
             </div>
+            
         </div>
     </div>
 
