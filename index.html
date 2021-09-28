@@ -13,75 +13,19 @@ index.html
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="aboutMe.css">
+    <link rel="stylesheet" href="style.css">
     <title>Kara Pelster Personal Webpage</title>
-
-    <style>
-        #polaroid {
-            transform: rotate(-10deg);
-            width: 400px;
-            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-        }
-
-        #page-content {
-            display: flex;
-            align-items: flex-end;
-            justify-content: center;
-            align-items: center;
-            flex-direction: row;
-        }
-
-        .btn-formatting {
-            color: black;
-            display: inline-flex;
-            margin: 5px;
-            background-color: white;
-            padding: 6px;
-            border-radius: 3px;
-            text-decoration: none !important;
-            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-            width: 125px;
-            justify-content: center;
-        }
-
-        .btn-formatting:hover {
-            background-color: #e4e4dd;
-        }
-
-        #home-link {
-            color: black;
-            padding: 20px;
-            display: block;
-            text-align: center;
-            text-decoration: underline;
-            cursor: pointer;
-        }
-
-        #main-content {
-            width: 500px;
-            padding: 10px;
-            padding-top: 30px;
-        }
-
-        .personal-photo {
-            padding: 5px;
-        }
-
-        body {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            font-family: system-ui;
-            background-image: url(images/pelster_custom_background.png);
-            background-size: 100%;
-            width: 100%;
-            border-radius: 5px;
-        }
-    </style>
 </head>
 
-<body> 
+<body>
+    <div class="page-nav-ribbon">
+        <!-- link to about me page -->
+        <a class="btn-formatting" href="aboutMe.html">About Me</a>
+        <a id="prev" class="btn-formatting" href="https://premanpatel.github.io">Prev Student</a>
+        <a id="next" class="btn-formatting" href="https://jrreap.github.io">Next Student</a>
+        <!-- link to class site -->
+        <a class="btn-formatting" href="https://mattm401.github.io/">CISC474 Site</a>
+    </div>
     <div id="page-content" style="border-bottom: 1px solid black;">
 
         <div style="padding: 30px; margin-right: 75px; margin-bottom: 50px;">
@@ -90,11 +34,12 @@ index.html
             <div id="polaroid">
                 <!-- polaroid css from https://www.w3schools.com/css/tryit.asp?filename=trycss_ex_images_card -->
                 <img src="/images/pelster_self_pic.jpg" alt="Image of Kara" width="400">
-                <img src="/images/pelster_custom_hello.jpg" alt="Image of 'Hi, I'm Kara!'" width="400" style = "margin-top:-5px; margin-bottom:-5px">
+                <img src="/images/pelster_custom_hello.jpg" alt="Image of 'Hi, I'm Kara!'" width="400"
+                    style="margin-top:-5px; margin-bottom:-5px">
             </div>
         </div>
 
-        <div id="main-content" style="height: 600px; margin-right: -75px">
+        <div class="main-content" style="height: 600px; margin-right: -75px">
 
             <!-- main content column -->
             <h1 style="font-weight: 400;letter-spacing: 1px; border-bottom: 1px solid black;">Kara Pelster</h1>
@@ -111,8 +56,7 @@ index.html
                 <p style="font-size:medium">Hello! My full name is Kara Kristine Pelster. <br>
                     You can call me Kara (care-uh) in class.</p>
 
-                <!-- link to about me page -->
-                <a class="btn-formatting" href="aboutMe.html">About Me</a>
+
 
                 <!-- web development topics list -->
                 <h2 style="font-weight: 300; font-family:system-ui; font-style:normal; letter-spacing: 1px">Web
@@ -125,8 +69,7 @@ index.html
                     <li>Use of different frameworks such as Angular and React</li>
                 </ul>
 
-                <!-- link to class site -->
-                <a class="btn-formatting" href="https://mattm401.github.io/">CISC474 Site</a>
+
             </div>
         </div>
 
@@ -135,8 +78,7 @@ index.html
     <!-- student navigation footer -->
     <div id="student-nav-content" style="padding-top: 10px; padding-bottom: 20px; margin-right: -50px; ">
         <div>
-            <a id="prev" class="btn-formatting" href="https://premanpatel.github.io">Prev Student</a>
-            <a id="next" class="btn-formatting" href="https://jrreap.github.io">Next Student</a>
+
         </div>
     </div>
 
