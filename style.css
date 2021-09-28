@@ -4,7 +4,7 @@
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-#page-content {
+.page-content {
     display: flex;
     /* height: 100%; */
     align-items: flex-end;
@@ -17,12 +17,12 @@
 .btn-formatting {
     color: black;
     display: inline-flex;
-    margin: 5px;
+    margin: -5px;
     background-color: white;
     padding: 6px;
-    border-radius: 3px;
+    /* border-radius: 3px; */
     text-decoration: none !important;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
     width: 125px;
     justify-content: center;
 }
@@ -71,7 +71,7 @@ body {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-#page-content {
+.page-content {
     display: flex;
     align-items: flex-end;
     justify-content: center;
