@@ -12,6 +12,7 @@
     align-items: center;
     flex-direction: row;
     /* width: 350px; */
+    width: 1000px;
 }
 
 .btn-formatting {
@@ -102,7 +103,6 @@ body {
 .h2-style{
     font-weight: 300;
     letter-spacing: 1px; 
-    border-bottom: 1px solid black;
 }
 
 .h3-style{
