@@ -8,18 +8,25 @@ window.onload = function () {
 
     // event listener for submit button
     document.getElementById('form-content').addEventListener('submit', function (event) {
+        
         event.preventDefault();
-
-        // if validate == false
+        
+        // if validate == true
         if (validate()) {
+            // send form if valid
             emailjs.sendForm('service_ujmgezw', 'template_fr77iso', this)
                 .then(function () {
+
                     console.log('SUCCESS!');
                     alert("Message Sent");
-                    clearForm();
+
                 }, function (error) {
+
                     console.log('FAILED...', error);
+
                 });
+            // reset form
+            document.getElementById('form-content').reset();
         }
 
     });
@@ -30,18 +37,7 @@ window.onload = function () {
  * @returns bool
  */
 function validate() {
-    // var invalid = false;
-
     invalid = validatePhone() & validateNames() & validateEmail() & validateMessage();
-
-    // if all are valid inputs
-    // if(validatePhone() || validateNames() || validateEmail() || validateMessage()){
-    //         console.log("invalid");
-    //         // invalid = true;
-    //     }
-
-    console.log("validate", invalid);
-    console.log("**************");
     return invalid;
 }
 
@@ -120,6 +116,7 @@ function validateEmail() {
 
     if (email == "") {
         valid = false;
+        document.getElementById("user_email").placeholder = "Required";
     }
 
     // make 'xx@yy.zz to [xx, yy.zz]
@@ -139,6 +136,7 @@ function validateEmail() {
 
         if (!(foundDomain || foundTPDomain)) {
             valid = fales;
+            document.getElementById("email-error").style.color = "red";
         }
     }
     catch {
@@ -147,7 +145,6 @@ function validateEmail() {
 
     if (!valid) {
         document.getElementById("user_email").style.border = "1px solid red";
-        document.getElementById("user_email").placeholder = "Required";
     }
 
     console.log("email", valid);
@@ -202,12 +199,4 @@ function compareDomain(domain) {
     }
 
     return found;
-}
-
-function clearForm() {
-    document.getElementById("user_fname").value == "";
-    document.getElementById("user_lname").value == "";
-    document.getElementById("user_email").value == "";
-    document.getElementById("user_phone").value == "";
-    document.getElementById("user_message").value == "";
 }

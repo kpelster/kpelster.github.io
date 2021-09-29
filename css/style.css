@@ -117,8 +117,11 @@ body {
 }
 
 #form-content{
-    width: 50%;
+    width: 550px;
     display: inline-grid;
+    border-radius: 3px;
+    background-color: #e3d9cb6e;
+    padding: 20px;
 }
 
 #contact-content{
@@ -139,4 +142,9 @@ body {
     display: flex;
     justify-content: center;
     margin: 10px;
+}
+
+.form-error{
+    float: right;
+    padding: 15px;
 }
