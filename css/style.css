@@ -23,7 +23,7 @@
     border-radius: 3px;
     text-decoration: none !important;
     /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
-    width: 125px;
+    width: 155px;
     justify-content: center;
     border: 0px;
 }
@@ -36,7 +36,7 @@
 
 .main-content {
     /* height: 900px;  */
-    width: 500px;
+    width: 400px;
     /* margin-right: -75px; */
     padding: 10px;
     padding-top: 30px;
