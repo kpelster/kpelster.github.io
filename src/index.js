@@ -1,24 +1,53 @@
+// global variable to store list of email domains
 var emailDomains; 
 
-document.addEventListener("DOMContentLoaded", function() {
-    callDomains();
-  });
+window.onload = function() {
 
+    // make call to domains url
+    callDomains();
+
+    // event listener for submit button
+    document.getElementById('form-content').addEventListener('submit', function(event) {
+        event.preventDefault();
+        
+        if(!validate()){
+            emailjs.sendForm('service_ujmgezw', 'template_fr77iso', this)
+                .then(function() {
+                    console.log('SUCCESS!');
+                    alert("Message Sent");
+                    clearForm();
+                }, function(error) {
+                    console.log('FAILED...', error);
+                });
+        }
+        
+    });
+}
+
+/**
+ * method to validate form input
+ * @returns bool
+ */
 function validate(){
-    var invalid = false;
+    var invalid = true;
 
     // if all are valid inputs
-    if(!(validatePhone() 
+    if((validatePhone() 
         & validateNames() 
         & validateEmail() 
         & validateMessage())){
-            // submit form
-    }
+            invalid = true;
+        }
+    return invalid;
 }
 
+/**
+ * method to validate phone input
+ * @returns bool
+ */
 function validatePhone(){
     var invalid = false;
-    document.getElementById("user_phone").style.border = "1px solid black";
+    document.getElementById("user_phone").style.border = "0px";
 
     var numberEntry = document.getElementById("user_phone").value;
     if(numberEntry == "" || !numberEntry.includes("-")){
@@ -42,12 +71,18 @@ function validatePhone(){
         document.getElementById("user_phone").placeholder = "Required";
     }
 
+    return invalid;
+
 }
 
+/**
+ * method to validate first name and last name
+ * @returns bool
+ */
 function validateNames(){
     var invalid = false;
-    document.getElementById("user_fname").style.border = "1px solid black";
-    document.getElementById("user_lname").style.border = "1px solid black";
+    document.getElementById("user_fname").style.border = "0px";
+    document.getElementById("user_lname").style.border = "0px";
 
     if(document.getElementById("user_fname").value == ""){
         invalid = true;
@@ -60,20 +95,25 @@ function validateNames(){
         document.getElementById("user_lname").placeholder = "Required";
     }
     
-
     return invalid;
 }
 
+/**
+ * method to validate email
+ * @returns bool
+ */
 function validateEmail(){
+    // get domains from url
     callDomains();
-    var invalid = false;
-    document.getElementById("user_email").style.border = "1px solid black";
 
-    var email = document.getElementById("user_email").value
+    var invalid = false;
+    // automatically remove border if exists
+    document.getElementById("user_email").style.border = "0px";
+
+    var email = document.getElementById("user_email").value;
 
     if(email == ""){
-        invalid = true;
-        
+        invalid = true;  
     }
 
     // make 'xx@yy.zz to [xx, yy.zz]
@@ -86,6 +126,11 @@ function validateEmail(){
         domain = domains[0].toUpperCase();
         tpDomain = domains[1].toUpperCase();
 
+        foundDomain = compareDomain(domain);
+        foundTPDomain = compareDomain(tpDomain);
+
+        console.log(domain, tpDomain);
+
         if(!(foundDomain || foundTPDomain)){
             invalid = true;
         }
@@ -94,27 +139,34 @@ function validateEmail(){
         invalid = true;
     }
 
-    
-   
     if(invalid){
         document.getElementById("user_email").style.border = "1px solid red";
         document.getElementById("user_email").placeholder = "Required";
     }
 
+    return invalid;
 }
 
+/**
+ * method to validate message
+ * @returns bool
+ */
 function validateMessage(){
     var invalid = false;
-    document.getElementById("user_message").style.border = "1px solid black";
+    document.getElementById("user_message").style.border = "0px";
 
     if(document.getElementById("user_message").value == ""){
         invalid = true;
         document.getElementById("user_message").style.border = "1px solid red";
         document.getElementById("user_message").placeholder = "Required";
     }
-
+    return invalid;
 }
 
+/**
+ * method that makes call to url that contains email domains
+ * uses event listener to make call to reqListener
+ */
 function callDomains(){
     var oReq = new XMLHttpRequest();
     oReq.addEventListener("load", reqListener);
@@ -122,20 +174,32 @@ function callDomains(){
     oReq.send();
 }
 
+/**
+ * method that sets emailDomains list equal to domains from url called in callDomains
+ */
 function reqListener(){
     emailDomains = this.responseText.split("\n");
-    
 }
 
+/**
+ * method that compares current domain to list of domains
+ * @param {*} domain 
+ * @returns 
+ */
 function compareDomain(domain){
     var found = false;
-    for(i=1; i<emailDomains.length; i++){
-        // console.log(emailDomains[i]);
-        if(domain == emailDomains[i]){
-            console.log("Found!", emailDomains[i], i);
-            found = true;
-            break;
-        }
+    if(emailDomains.includes(domain)){
+        found = true;
+        console.log("Found!");
     }
+
     return found;
+}
+
+function clearForm(){
+    document.getElementById("user_fname").value == "";
+    document.getElementById("user_lname").value == "";
+    document.getElementById("user_email").value == "";
+    document.getElementById("user_phone").value == "";
+    document.getElementById("user_message").value == "";
 }

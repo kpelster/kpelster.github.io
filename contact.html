@@ -14,8 +14,15 @@ contact.html
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/style.css">
-    <script src = "src/index.js"></script>
+    <script src="src/index.js"></script>
     <title>Contact Me</title>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init("user_j39dx3RjcjMv4ltxbuxv2");
+        })();
+    </script>
 </head>
 
 <body>
@@ -38,40 +45,40 @@ contact.html
         <a id="next" class="btn-formatting" href="https://jrreap.github.io">Next Student</a>
 
     </div>
-    
-    <div id = "contact-content">
-        <h1 class = "h1-style">Contact Me</h1>
+
+    <div id="contact-content">
+        <h1 class="h1-style">Contact Me</h1>
 
 
-        <div id = "form-content">
-            <div class = "field-row" id = "first-name">
-                <label class = "field-label">First Name*</label>
+        <form id="form-content">
+            <div class="field-row" id="first-name">
+                <label class="field-label" name = "from_name">First Name*</label>
 
-                <input class = "field-input" id = "user_fname">
+                <input class="field-input" id="user_fname" name="user_fname">
             </div>
-            <div class = "field-row" id = "last-name">
-                <label class = "field-label">Last Name*</label>
-                <input class = "field-input" id = "user_lname">
+            <div class="field-row" id="last-name">
+                <label class="field-label">Last Name*</label>
+                <input class="field-input" id="user_lname" name="user_lname">
             </div>
-            <div class = "field-row" id = "email">
-                <label class = "field-label">Email Address*</label>
-                <input class = "field-input" id = "user_email">
+            <div class="field-row" id="email">
+                <label class="field-label">Email Address*</label>
+                <input class="field-input" id="user_email" name = "user_email">
             </div>
-            <div class = "field-row" id = "phone">
-                <label class = "field-label">Phone Number*</label>
-                <label id = "phone-error"></label>
-                <input class = "field-input" id = "user_phone" placeholder = "XXX-XXX-XXXX">
+            <div class="field-row" id="phone">
+                <label class="field-label">Phone Number*</label>
+                <label id="phone-error"></label>
+                <input class="field-input" id="user_phone" name = "user_phone" placeholder="XXX-XXX-XXXX">
             </div>
-            <div class = "field-row" id = "message">
-                <label class = "field-label">Message*</label>
-                <textarea id = "user_message" class = "field-input" ></textarea>
+            <div class="field-row" id="message">
+                <label class="field-label">Message*</label>
+                <textarea id="user_message" class="field-input" name = "message"></textarea>
             </div>
-            <label style = "font-size: smaller;">* Required Fields</label>
-            <div id = "submit-form-div">
-                <a type = "button" onclick = "validate()" class = "btn-formatting" id = "submit-form-btn">Submit</a>
+            <label style="font-size: smaller;">* Required Fields</label>
+            <div id="submit-form-div">
+                <input type="submit" class="btn-formatting" id="submit-form-btn" value = "Send">
             </div>
-            
-        </div>
+
+        </form>
     </div>
 
 
