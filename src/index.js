@@ -25,7 +25,7 @@ window.onload = function () {
                 .then(function () {
 
                     console.log('SUCCESS!');
-                    alert("Message Sent");
+                    alert("Message Sent!");
 
                 }, function (error) {
 
