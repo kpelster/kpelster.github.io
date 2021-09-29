@@ -142,7 +142,7 @@ function validateEmail() {
         console.log(domain, tpDomain);
 
         if (!(foundDomain || foundTPDomain)) {
-            valid = fales;
+            valid = false;
             document.getElementById("email-error").style.color = "red";
         }
     }
