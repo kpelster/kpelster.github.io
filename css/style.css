@@ -96,6 +96,23 @@ body {
 .h1-style{
     font-weight: 400;
     letter-spacing: 1px;
+    border-bottom: 1px solid black;
+}
+
+.h2-style{
+    font-weight: 300;
+    letter-spacing: 1px; 
+    border-bottom: 1px solid black;
+}
+
+.h3-style{
+    font-weight: 200; 
+    letter-spacing: 1px
+}
+
+.ul-style{
+    font-family:system-ui;
+    letter-spacing: 1px
 }
 
 .field-label{
@@ -147,4 +164,13 @@ body {
 .form-error{
     float: right;
     padding: 15px;
+}
+
+#aboutMe-selfImage{
+    margin-top: -300px;
+}
+
+.polaroid-words{
+    margin-top:-5px; 
+    margin-bottom:-5px
 }

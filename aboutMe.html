@@ -54,8 +54,8 @@ aboutMe.html
             <div id="polaroid">
 
                 <!-- polaroid css from https://www.w3schools.com/css/tryit.asp?filename=trycss_ex_images_card -->
-                <img src="/images/aboutMe_self_pic.JPG" alt="Image of Kara" width="400">
-                <img src="/images/pelster_custom_hello.jpg" alt="Image of 'Hi, I'm Kara!'" width="400" style = "margin-top:-5px; margin-bottom:-5px">
+                <img id = "aboutMe-selfImage" src="/images/aboutMe_self_pic.JPG" alt="Image of Kara" width="400">
+                <img class = "polaroid-words" src="/images/pelster_custom_hello.jpg" alt="Image of 'Hi, I'm Kara!'" width="400">
 
             </div>
         </div>
@@ -63,7 +63,7 @@ aboutMe.html
         <!-- about me column -->
         <div class="main-content" style = "width: 500px">
 
-            <h1 style="font-weight: 400;letter-spacing: 1px; border-bottom: 1px solid black;">About Me</h1>
+            <h1 class = "h1-style">About Me</h1>
             <!-- 
                 Kara Pelster    
                 CISC474 010
@@ -81,7 +81,7 @@ aboutMe.html
                 <!-- hobbies bullet list -->
                 <span>My hobbies include:</span>
 
-                <ul style="font-family:system-ui;letter-spacing: 1px">
+                <ul class = "ul-style">
                     <li>Running</li>
                     <li>Golfing (Fun Fact: I've made a hole in one before!)</li>
                     <li>Charcoal Drawing</li>
@@ -90,15 +90,15 @@ aboutMe.html
                 <!-- personal photos -->
             </div id="photos-div">
 
-            <h2 style="font-weight: 300;letter-spacing: 1px; border-bottom: 1px solid black;">Photos</h2>
+            <h2 class = "h2-style">Photos</h2>
 
             <!-- finn my dog -->
-            <h3 style="font-weight: 200; letter-spacing: 1px">My Running Pal, Finn</h3>
+            <h3 class = "h3-style">My Running Pal, Finn</h3>
             <img class="personal-photo" src="images/finn-ud.jpeg" alt = "Finn at UD!" height="200px">
             <img class="personal-photo" src="images/me-finn.jpeg" alt = "Kara and Finn" height="200px">
 
             <!-- art -->
-            <h3 style="font-weight: 200; letter-spacing: 1px">Some of My Art</h3>
+            <h3 class = "h3-style">Some of My Art</h3>
             <img class="personal-photo" src="/images/profile.jpg" alt = "Image of Profile of man" height="200px">
             <img class="personal-photo" src="/images/stairs.jpg" alt = "Image of Stairs" height="200px">
             <img class="personal-photo" src="/images/blurry-face.jpg" alt = "Image of Blurry face of man" height="200px">
