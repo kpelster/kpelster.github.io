@@ -1,7 +1,7 @@
 <!-- 
 Kara Pelster
 CISC474 
-Personal Webpage 1
+Personal Webpage 2
 contact.html
 -->
 
@@ -19,6 +19,7 @@ contact.html
 
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
     <script type="text/javascript">
+        // initialize emailJS using user id
         (function () {
             emailjs.init("user_j39dx3RjcjMv4ltxbuxv2");
         })();
@@ -47,36 +48,56 @@ contact.html
     </div>
 
     <div id="contact-content">
+
         <h1 class="h1-style">Contact Me</h1>
+         <!-- 
+                Kara Pelster    
+                CISC474 010
+                Personal Webpage 2
+                kpelster@udel.edu 
+                -->
 
-
+        <!-- contact form -->
         <form id="form-content">
+
+            <!-- first name -->
             <div class="field-row" id="first-name">
                 <label class="field-label" name = "from_name">First Name*</label>
-
                 <input class="field-input" id="user_fname" name="user_fname">
             </div>
+
+            <!-- last name -->
             <div class="field-row" id="last-name">
                 <label class="field-label">Last Name*</label>
                 <input class="field-input" id="user_lname" name="user_lname">
             </div>
+
+            <!-- email -->
             <div class="field-row" id="email">
                 <label class="field-label">Email Address*</label>
                 
                 <input class="field-input" id="user_email" name = "user_email">
                 <label class = "form-error" id = "email-error">Invalid Email</label>
             </div>
+
+            <!-- phone -->
             <div class="field-row" id="phone">
                 <label class="field-label">Phone Number*</label>
                 <label id="phone-error"></label>
                 <input class="field-input" id="user_phone" name = "user_phone" placeholder="XXX-XXX-XXXX">
                 <label class = "form-error" id = "phone-error">Invalid Format</label>
             </div>
+
+            <!-- message -->
             <div class="field-row" id="message">
                 <label class="field-label">Message*</label>
                 <textarea id="user_message" class="field-input" name = "message"></textarea>
             </div>
+
+            <!-- note of required fields -->
             <label style="font-size: smaller;">* Required Fields</label>
+
+            <!-- submit button -->
             <div id="submit-form-div">
                 <input type="submit" class="btn-formatting" id="submit-form-btn" value = "Send">
             </div>
