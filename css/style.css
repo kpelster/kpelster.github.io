@@ -90,6 +90,7 @@ body {
     background-color: white;
     padding: 5px;
     border-radius: 3px;
+    width: max-content;
 }
 
 .h1-style{

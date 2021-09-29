@@ -1,26 +1,27 @@
 // global variable to store list of email domains
-var emailDomains; 
+var emailDomains;
 
-window.onload = function() {
+window.onload = function () {
 
     // make call to domains url
     callDomains();
 
     // event listener for submit button
-    document.getElementById('form-content').addEventListener('submit', function(event) {
+    document.getElementById('form-content').addEventListener('submit', function (event) {
         event.preventDefault();
-        
-        if(!validate()){
+
+        // if validate == false
+        if (validate()) {
             emailjs.sendForm('service_ujmgezw', 'template_fr77iso', this)
-                .then(function() {
+                .then(function () {
                     console.log('SUCCESS!');
                     alert("Message Sent");
                     clearForm();
-                }, function(error) {
+                }, function (error) {
                     console.log('FAILED...', error);
                 });
         }
-        
+
     });
 }
 
@@ -28,16 +29,19 @@ window.onload = function() {
  * method to validate form input
  * @returns bool
  */
-function validate(){
-    var invalid = true;
+function validate() {
+    // var invalid = false;
+
+    invalid = validatePhone() & validateNames() & validateEmail() & validateMessage();
 
     // if all are valid inputs
-    if((validatePhone() 
-        & validateNames() 
-        & validateEmail() 
-        & validateMessage())){
-            invalid = true;
-        }
+    // if(validatePhone() || validateNames() || validateEmail() || validateMessage()){
+    //         console.log("invalid");
+    //         // invalid = true;
+    //     }
+
+    console.log("validate", invalid);
+    console.log("**************");
     return invalid;
 }
 
@@ -45,33 +49,34 @@ function validate(){
  * method to validate phone input
  * @returns bool
  */
-function validatePhone(){
-    var invalid = false;
+function validatePhone() {
+    var valid = true;
     document.getElementById("user_phone").style.border = "0px";
 
     var numberEntry = document.getElementById("user_phone").value;
-    if(numberEntry == "" || !numberEntry.includes("-")){
-        invalid = true;
+    if (numberEntry == "" || !numberEntry.includes("-")) {
+        valid = false;
     }
 
-    else{
+    else {
         numberEntry = numberEntry.split("-");
-        if(numberEntry.length != 3
-            || numberEntry[0].length !=3 
-            || numberEntry[1].length !=3
-            || numberEntry[2].length !=4){
-                invalid = true;
-                document.getElementById("phone-error").value = "Invalid Format";
-            }
-        
+        if (numberEntry.length != 3
+            || numberEntry[0].length != 3
+            || numberEntry[1].length != 3
+            || numberEntry[2].length != 4) {
+                valid = false;
+            document.getElementById("phone-error").value = "Invalid Format";
+        }
+
     }
 
-    if(invalid){
+    if (!valid) {
         document.getElementById("user_phone").style.border = "1px solid red";
         document.getElementById("user_phone").placeholder = "Required";
     }
 
-    return invalid;
+    console.log("phone", valid);
+    return valid;
 
 }
 
@@ -79,45 +84,46 @@ function validatePhone(){
  * method to validate first name and last name
  * @returns bool
  */
-function validateNames(){
-    var invalid = false;
+function validateNames() {
+    var valid = true;
     document.getElementById("user_fname").style.border = "0px";
     document.getElementById("user_lname").style.border = "0px";
 
-    if(document.getElementById("user_fname").value == ""){
-        invalid = true;
+    if (document.getElementById("user_fname").value == "") {
+        valid = false;
         document.getElementById("user_fname").style.border = "1px solid red";
         document.getElementById("user_fname").placeholder = "Required";
     }
-    if(document.getElementById("user_lname").value == ""){
-        invalid = true;
+    if (document.getElementById("user_lname").value == "") {
+        valid = false;
         document.getElementById("user_lname").style.border = "1px solid red";
         document.getElementById("user_lname").placeholder = "Required";
     }
-    
-    return invalid;
+
+    console.log("names", valid);
+    return valid;
 }
 
 /**
  * method to validate email
  * @returns bool
  */
-function validateEmail(){
+function validateEmail() {
     // get domains from url
     callDomains();
 
-    var invalid = false;
+    var valid = true;
     // automatically remove border if exists
     document.getElementById("user_email").style.border = "0px";
 
     var email = document.getElementById("user_email").value;
 
-    if(email == ""){
-        invalid = true;  
+    if (email == "") {
+        valid = false;
     }
 
     // make 'xx@yy.zz to [xx, yy.zz]
-    try{
+    try {
         email = email.split("@");
         domains = email[1];
         //  make yy.zz to [yy, zz]
@@ -131,43 +137,45 @@ function validateEmail(){
 
         console.log(domain, tpDomain);
 
-        if(!(foundDomain || foundTPDomain)){
-            invalid = true;
+        if (!(foundDomain || foundTPDomain)) {
+            valid = fales;
         }
     }
-    catch{
-        invalid = true;
+    catch {
+        valid = false;
     }
 
-    if(invalid){
+    if (!valid) {
         document.getElementById("user_email").style.border = "1px solid red";
         document.getElementById("user_email").placeholder = "Required";
     }
 
-    return invalid;
+    console.log("email", valid);
+    return valid;
 }
 
 /**
  * method to validate message
  * @returns bool
  */
-function validateMessage(){
-    var invalid = false;
+function validateMessage() {
+    var valid = true;
     document.getElementById("user_message").style.border = "0px";
 
-    if(document.getElementById("user_message").value == ""){
-        invalid = true;
+    if (document.getElementById("user_message").value == "") {
+        valid = false;
         document.getElementById("user_message").style.border = "1px solid red";
         document.getElementById("user_message").placeholder = "Required";
     }
-    return invalid;
+    console.log("message", valid);
+    return valid;
 }
 
 /**
  * method that makes call to url that contains email domains
  * uses event listener to make call to reqListener
  */
-function callDomains(){
+function callDomains() {
     var oReq = new XMLHttpRequest();
     oReq.addEventListener("load", reqListener);
     oReq.open("GET", "http://data.iana.org/TLD/tlds-alpha-by-domain.txt");
@@ -177,7 +185,7 @@ function callDomains(){
 /**
  * method that sets emailDomains list equal to domains from url called in callDomains
  */
-function reqListener(){
+function reqListener() {
     emailDomains = this.responseText.split("\n");
 }
 
@@ -186,9 +194,9 @@ function reqListener(){
  * @param {*} domain 
  * @returns 
  */
-function compareDomain(domain){
+function compareDomain(domain) {
     var found = false;
-    if(emailDomains.includes(domain)){
+    if (emailDomains.includes(domain)) {
         found = true;
         console.log("Found!");
     }
@@ -196,7 +204,7 @@ function compareDomain(domain){
     return found;
 }
 
-function clearForm(){
+function clearForm() {
     document.getElementById("user_fname").value == "";
     document.getElementById("user_lname").value == "";
     document.getElementById("user_email").value == "";
