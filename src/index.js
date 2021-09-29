@@ -1,3 +1,10 @@
+/**
+ * Kara Pelster
+ * CISC474
+ * Personal Webpage 2
+ * index.js
+ **/
+
 // global variable to store list of email domains
 var emailDomains;
 
