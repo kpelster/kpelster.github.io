@@ -34,7 +34,7 @@
 }
 
 
-.main-content {
+#main-content-about-me {
     /* height: 900px;  */
     width: 400px;
     /* margin-right: -75px; */
@@ -173,4 +173,19 @@ body {
 .polaroid-words{
     margin-top:-5px; 
     margin-bottom:-5px
+}
+
+#polaroid-div{
+    padding: 30px; 
+    margin-right: 75px; 
+    margin-bottom: 50px;
+    margin-bottom: 25px;
+}
+
+#main-content-home{
+    width: 400px;
+    padding: 10px;
+    padding-top: 30px;
+    height: 600px; 
+    margin-right: -75px
 }
