@@ -182,7 +182,7 @@ function validateMessage() {
 function callDomains() {
     var oReq = new XMLHttpRequest();
     oReq.addEventListener("load", reqListener);
-    oReq.open("GET", "http://data.iana.org/TLD/tlds-alpha-by-domain.txt");
+    oReq.open("GET", "https://data.iana.org/TLD/tlds-alpha-by-domain.txt");
     oReq.send();
 }
 
