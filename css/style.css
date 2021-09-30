@@ -1,51 +1,27 @@
-#polaroid {
-    transform: rotate(-10deg);
-    width: 400px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-
-.page-content {
+/* .page-content {
     display: flex;
-    /* height: 100%; */
     align-items: flex-end;
     justify-content: center;
     align-items: center;
     flex-direction: row;
-    /* width: 350px; */
     border-bottom: 1px solid black;
-}
+} */
 
 .btn-formatting {
     color: black;
     display: inline-flex;
-    /* margin: -5px; */
     background-color: white;
     padding: 6px;
     border-radius: 3px;
     text-decoration: none !important;
-    /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
     width: 155px;
     justify-content: center;
     border: 0px;
 }
 
 .btn-formatting:hover {
-    /* background-color: #e9e9e9; */
     cursor: pointer;
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.1), 0 6px 6px 0 rgba(0, 0, 0, 0.1);
-}
-
-
-#main-content-about-me {
-    /* height: 900px;  */
-    width: 400px;
-    /* margin-right: -75px; */
-    padding: 10px;
-    padding-top: 30px;
-}
-
-.personal-photo {
-    padding: 5px;
 }
 
 body {
@@ -60,12 +36,6 @@ body {
     border-radius: 5px;
 }
 
-#polaroid {
-    transform: rotate(-10deg);
-    width: 400px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-
 .page-content {
     display: flex;
     align-items: flex-end;
@@ -74,26 +44,23 @@ body {
     flex-direction: row;
 }
 
-
-/* .home-link {
-    color: black;
-    padding: 20px;
-    display: block;
-    text-align: center;
-    text-decoration: underline;
-    cursor: pointer;
-} */
-
-.personal-photo {
-    padding: 5px;
-}
-
 .page-nav-ribbon{
     background-color: white;
     padding: 5px;
     border-radius: 3px;
     width: max-content;
 }
+
+.personal-photo {
+    padding: 5px;
+}
+
+.polaroid-words{
+    margin-top:-5px; 
+    margin-bottom:-5px
+}
+
+/****** header styles ******/
 
 .h1-style{
     font-weight: 400;
@@ -114,6 +81,12 @@ body {
 .ul-style{
     font-family:system-ui;
     letter-spacing: 1px
+}
+
+/****** contact form ******/
+
+#contact-me-header{
+    border: 0px;
 }
 
 .field-label{
@@ -162,31 +135,80 @@ body {
     margin: 10px;
 }
 
-.form-error{
-    float: right;
-    padding: 15px;
+.form-error {
+    color: red;
+    display: none;
+    width: 95%;
+    font-size: smaller;
+    display: none;
+    text-align: right;
 }
 
-#aboutMe-selfImage{
-    margin-top: -300px;
+#email-error{
+    width: 73%;
 }
 
-.polaroid-words{
-    margin-top:-5px; 
-    margin-bottom:-5px
+#req-fields-note{
+    font-size: smaller
 }
 
-#polaroid-div{
+#submit-form-btn{
+    width: 115px;
+}
+
+/****** home (index) page ******/
+
+#home-main-content{
+    width: 400px;
+    padding: 10px;
+    padding-top: 30px;
+    height: 600px; 
+    margin-right: -75px
+}
+
+#home-page-content{
+    width: 1000px;
+}
+
+#home-intro-paragraph{
+    font-size: medium;
+}
+
+#home-polaroid {
+    transform: rotate(-10deg);
+    width: 400px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#home-polaroid-div{
     padding: 30px; 
     margin-right: 75px; 
     margin-bottom: 50px;
     margin-top: 25px;
 }
 
-#main-content-home{
+
+
+
+/****** aboutMe page  ******/
+
+#aboutMe-main-content {
+    /* height: 900px;  */
     width: 400px;
+    /* margin-right: -75px; */
     padding: 10px;
     padding-top: 30px;
-    height: 600px; 
-    margin-right: -75px
+}
+
+#aboutMe-column{
+    width: 500px;
+}
+
+#aboutMe-polaroid{
+    padding: 30px; 
+    margin-right: 75px;
+}
+
+#aboutMe-selfImage{
+    margin-top: -300px;
 }

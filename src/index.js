@@ -61,12 +61,13 @@ function validatePhone() {
     document.getElementById("phone-error").style.display = "none";
 
     var numberEntry = document.getElementById("user_phone").value;
-    if (numberEntry == "" || !numberEntry.includes("-")) {
+    if (numberEntry == "") {
         valid = false;
     }
 
     else {
         numberEntry = numberEntry.split("-");
+        console.log(numberEntry.length);
         if (numberEntry.length != 3
             || numberEntry[0].length != 3
             || numberEntry[1].length != 3
@@ -79,7 +80,7 @@ function validatePhone() {
 
     if (!valid) {
         document.getElementById("user_phone").style.border = "1px solid red";
-        document.getElementById("user_phone").placeholder = "Required";
+        document.getElementById("user_phone").placeholder = "Required (XXX-XXX-XXXX)";
     }
 
     if(!validFormat){
