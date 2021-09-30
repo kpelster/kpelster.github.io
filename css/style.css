@@ -185,20 +185,18 @@ body {
 /****** aboutMe page  ******/
 
 #aboutMe-main-content {
-    /* height: 900px;  */
     width: 400px;
-    /* margin-right: -75px; */
     padding: 10px;
     padding-top: 30px;
 }
 
 #aboutMe-column{
-    width: 500px;
+    width: 585px;
 }
 
 #aboutMe-polaroid{
     padding: 30px; 
-    margin-right: 75px;
+    margin-right: 50px;
 }
 
 #aboutMe-selfImage{
