@@ -1,11 +1,11 @@
-/* .page-content {
+.page-content {
     display: flex;
     align-items: flex-end;
     justify-content: center;
     align-items: center;
     flex-direction: row;
     border-bottom: 1px solid black;
-} */
+}
 
 .btn-formatting {
     color: black;
@@ -34,14 +34,6 @@ body {
     background-size: 100%;
     width: 100%;
     border-radius: 5px;
-}
-
-.page-content {
-    display: flex;
-    align-items: flex-end;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
 }
 
 .page-nav-ribbon{
