@@ -34,12 +34,13 @@ window.onload = function () {
                 });
             // reset form
             document.getElementById('form-content').reset();
+            document.getElementById("email-error").style.display = "none";
+            document.getElementById("phone-error").style.display = "none";
         }
 
     });
-}
 
-/**
+    /**
  * method to validate form input
  * @returns bool
  */
@@ -54,7 +55,10 @@ function validate() {
  */
 function validatePhone() {
     var valid = true;
+    var validFormat = true;
+    // removed red border and set error message display to none
     document.getElementById("user_phone").style.border = "0px";
+    document.getElementById("phone-error").style.display = "none";
 
     var numberEntry = document.getElementById("user_phone").value;
     if (numberEntry == "" || !numberEntry.includes("-")) {
@@ -68,7 +72,7 @@ function validatePhone() {
             || numberEntry[1].length != 3
             || numberEntry[2].length != 4) {
                 valid = false;
-            document.getElementById("phone-error").value = "Invalid Format";
+                validFormat = false;
         }
 
     }
@@ -78,7 +82,10 @@ function validatePhone() {
         document.getElementById("user_phone").placeholder = "Required";
     }
 
-    console.log("phone", valid);
+    if(!validFormat){
+        document.getElementById("phone-error").style.display = "inline-block";
+    }
+
     return valid;
 
 }
@@ -116,14 +123,19 @@ function validateEmail() {
     callDomains();
 
     var valid = true;
-    // automatically remove border if exists
+    var validEmail = true;
+
+    // automatically remove border and error messgae if exists
     document.getElementById("user_email").style.border = "0px";
+    document.getElementById("email-error").style.display = "none";
 
     var email = document.getElementById("user_email").value;
 
     if (email == "") {
-        valid = false;
+        // if email is blank, make border red and set placeholder "Required"
+        document.getElementById("user_email").style.border = "1px solid red";
         document.getElementById("user_email").placeholder = "Required";
+        return false;
     }
 
     // make 'xx@yy.zz to [xx, yy.zz]
@@ -143,18 +155,22 @@ function validateEmail() {
 
         if (!(foundDomain || foundTPDomain)) {
             valid = false;
-            document.getElementById("email-error").style.color = "red";
+            validEmail = false;
+            
         }
     }
     catch {
         valid = false;
+        validEmail = false;
+    }
+
+    if(!validEmail & email != ""){
+        document.getElementById("email-error").style.display = "inline-block";
     }
 
     if (!valid) {
         document.getElementById("user_email").style.border = "1px solid red";
     }
-
-    console.log("email", valid);
     return valid;
 }
 
@@ -207,3 +223,6 @@ function compareDomain(domain) {
 
     return found;
 }
+}
+
+

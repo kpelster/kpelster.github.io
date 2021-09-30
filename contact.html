@@ -75,17 +75,15 @@ contact.html
             <!-- email -->
             <div class="field-row" id="email">
                 <label class="field-label">Email Address*</label>
-                
                 <input class="field-input" id="user_email" name = "user_email">
-                <label class = "form-error" id = "email-error">Invalid Email</label>
+                <label class = "form-error" id = "email-error" style = "display: none; color:red">Invalid Email</label>
             </div>
 
             <!-- phone -->
             <div class="field-row" id="phone">
                 <label class="field-label">Phone Number*</label>
-                <label id="phone-error"></label>
                 <input class="field-input" id="user_phone" name = "user_phone" placeholder="XXX-XXX-XXXX">
-                <label class = "form-error" id = "phone-error">Invalid Format</label>
+                <label class = "form-error" id = "phone-error" style = "display: none; color:red">Invalid Format</label>
             </div>
 
             <!-- message -->
@@ -99,7 +97,7 @@ contact.html
 
             <!-- submit button -->
             <div id="submit-form-div">
-                <input type="submit" class="btn-formatting" id="submit-form-btn" value = "Send">
+                <input style = "width: 115px" type="submit" class="btn-formatting" id="submit-form-btn" value = "Send">
             </div>
 
         </form>
