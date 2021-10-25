@@ -55,8 +55,8 @@
     
     .field-label{
         float:left;
-        margin-top: 15px;
-        font-size: small;
+        margin-top: 20px;
+        font-size: x-small;
     }
     
     .field-input{
@@ -148,8 +148,8 @@
 
     .main-paragraph{
         width: 70%;
-        padding: 100px;
-        font-size: xx-large
+        padding-left: 50px;
+        font-size: x-large
     }
 
     #form-content{
@@ -219,7 +219,11 @@
 }
 
 
-
+#about-me-images{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
 .btn-formatting:hover {
     cursor: pointer;
     /* box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.1), 4px 0 0 0 rgba(0, 0, 0, 0.1); */
@@ -229,7 +233,9 @@
 /* polaroid */
 
 .personal-photo {
-    padding: 5px;
+    margin:5px;
+    width: 30%;
+    height: 30%;
 }
 
 .polaroid-words{
