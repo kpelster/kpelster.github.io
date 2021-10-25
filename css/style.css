@@ -1,4 +1,4 @@
-@media only screen and (min-width: 200px) {
+@media only screen and (min-width: 0px) {
     .page-content {
         display: flex;
     align-items: flex-start;
@@ -20,7 +20,8 @@
         /* width: 155px; */
         justify-content: center;
         border: 0px;
-        font-size:small
+        font-size:3vw;
+        margin:5px
     }
 
     .h1-style{
@@ -74,6 +75,11 @@
         border-bottom: 1px solid black;
     }
 
+    .class-links{
+        display: inline;
+        padding-top:5px
+    }
+
 }
     
     body {
@@ -125,7 +131,8 @@
         justify-content: center;
         border: 0px;
         height: 50px;
-        font-size:xx-large
+        font-size:xx-large;
+        margin:5px
     }
 
     .h1-style{
@@ -187,7 +194,13 @@
         border-bottom: 1px solid black;
         min-height: 100px
     }
+
+    .class-links{
+        display: inline-grid;
+        padding-top: 25px;
+    }
   }
+
 
 
 .page-nav-ribbon{
@@ -212,10 +225,22 @@
     font-size:xx-large
 }
 
+.class-extra-links{
+    border: 1px solid #f3f2f2;
+    padding: 0px;
+}
+
 
 .nav-name{
     /* height: 50%; */
     width: 40%;
+}
+
+.links-div{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #f3f2f2;
+    border-radius: 5px;
 }
 
 

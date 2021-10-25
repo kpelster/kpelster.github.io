@@ -7,6 +7,7 @@
 
 // global variable to store list of email domains
 var emailDomains;
+var linksopen = false;
 
 window.onload = function () {
 
@@ -14,7 +15,8 @@ window.onload = function () {
     callDomains();
 
     // event listener for submit button
-    document.getElementById('form-content').addEventListener('submit', function (event) {
+    try{
+        document.getElementById('form-content').addEventListener('submit', function (event) {
         
         event.preventDefault();
         
@@ -37,10 +39,26 @@ window.onload = function () {
             document.getElementById("email-error").style.display = "none";
             document.getElementById("phone-error").style.display = "none";
         }
+    });
+    }
+    catch{
 
+    }
+
+    $(".class-links").on("click mouseleave mouseenter", function(){
+        console.log(linksopen);
+        if(!linksopen){
+            $(".links-div").show();
+            linksopen = !linksopen;
+        }
+        else{
+            $(".links-div").hide();
+        }
+        linksopen = !linksopen;
     });
 
-    /**
+
+/**
  * method to validate form input
  * @returns bool
  */
