@@ -1,4 +1,82 @@
-body {
+@media only screen and (min-width: 200px) {
+    .page-content {
+        display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    /* align-items: center; */
+    flex-direction: column;
+    }
+
+    .self-image{
+        width: 100%;
+    }
+
+    .btn-formatting {
+        color: black;
+        display: inline-flex;
+        background-color: white;
+        border-radius: 3px;
+        text-decoration: none !important;
+        /* width: 155px; */
+        justify-content: center;
+        border: 0px;
+        font-size:small
+    }
+
+    .h1-style{
+        font-weight: 400;
+        /* letter-spacing: 1px; */
+        /* border-bottom: 1px solid black; */
+    }
+
+    .main-content{
+        /* padding-top: 30px;
+        height: 600px; 
+        margin-right: -75px */
+        display: flex;
+        align-items:flex-start;
+        flex-direction: column;
+        /* font-size: larger; */
+    }
+
+    #form-content{
+        display: inline-grid;
+        border-radius: 3px;
+        background-color: #3d552440;
+        padding: 20px;
+        margin:10px;
+        height: auto
+    }
+
+    #contact-me-header{
+        border: 0px;
+        font-size: small;
+    }
+    
+    .field-label{
+        float:left;
+        margin-top: 15px;
+        font-size: small;
+    }
+    
+    .field-input{
+        float: right;
+        border-radius: 3px;
+        padding: 7px;
+        margin: 10px;
+        width: 50%;
+        /* height: 50px; */
+        border: 1px solid white;
+        /* font-size: xx-large; */
+    }
+    
+    .field-row{
+        border-bottom: 1px solid black;
+    }
+
+}
+    
+    body {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -11,23 +89,106 @@ body {
     font-family: "Helvetica Neue", "Arial", sans-serif;
     font-weight: 100;
     letter-spacing: 3px;
+
+    
 }
 
 /****** classes ******/
 
 /* page layout */
 
-.page-content {
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    /* align-items: center; */
-    flex-direction: row;
-    /* border-bottom: 1px solid black; */
-    width: 95%;
-    height: 100%;
-    font-size: xx-large;
-}
+
+@media only screen and (min-width: 961px) {
+    .page-content {
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        flex-direction: row;
+        width: 95%;
+        height: 100%;
+        font-size: xx-large;
+    }
+
+    .self-image{
+        width: 50%;
+    }
+    /* button formats */
+
+    .btn-formatting {
+        color: black;
+        display: inline-flex;
+        background-color: white;
+        padding: 20px;
+        border-radius: 3px;
+        text-decoration: none !important;
+        /* width: 155px; */
+        justify-content: center;
+        border: 0px;
+        height: 50px;
+        font-size:xx-large
+    }
+
+    .h1-style{
+        font-weight: 400;
+        /* letter-spacing: 1px; */
+        /* border-bottom: 1px solid black; */
+    }
+
+    .main-content{
+        width: 50%;
+        padding: 10px;
+        /* padding-top: 30px;
+        height: 600px; 
+        margin-right: -75px */
+        display: flex;
+        align-items:flex-start;
+        flex-direction: column;
+        font-size: larger;
+    }
+
+    .main-paragraph{
+        width: 70%;
+        padding: 100px;
+        font-size: xx-large
+    }
+
+    #form-content{
+        width: 40%;
+        display: inline-grid;
+        border-radius: 3px;
+        background-color: #3d552440;
+        padding: 20px;
+        height: auto
+    }
+
+    #contact-me-header{
+        border: 0px;
+        font-size: xx-large
+    }
+    
+    .field-label{
+        float:left;
+        margin-top: 25px;
+        font-size: xx-large;
+    }
+    
+    .field-input{
+        float: right;
+        border-radius: 3px;
+        padding: 7px;
+        margin: 10px;
+        width: 50%;
+        height: 50px;
+        border: 1px solid white;
+        font-size: xx-large;
+    }
+    
+    .field-row{
+        border-bottom: 1px solid black;
+        min-height: 100px
+    }
+  }
+
 
 .page-nav-ribbon{
     background-color: white;
@@ -35,7 +196,8 @@ body {
     border-radius: 3px;
     /* width: max-content; */
     width: 100%;
-    height: 300px;
+    /* max-height: 300px; */
+    height:20%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -46,28 +208,17 @@ body {
     text-align: center;
     margin: auto;
     width: 100%;
+    height:70%;
     font-size:xx-large
 }
 
-.self-image{
-    width: 50%;
+
+.nav-name{
+    /* height: 50%; */
+    width: 40%;
 }
 
-/* button formats */
 
-.btn-formatting {
-    color: black;
-    display: inline-flex;
-    background-color: white;
-    padding: 20px;
-    border-radius: 3px;
-    text-decoration: none !important;
-    /* width: 155px; */
-    justify-content: center;
-    border: 0px;
-    height: 50px;
-    font-size:xx-large
-}
 
 .btn-formatting:hover {
     cursor: pointer;
@@ -94,11 +245,7 @@ body {
 
 /****** header styles ******/
 
-.h1-style{
-    font-weight: 400;
-    /* letter-spacing: 1px; */
-    /* border-bottom: 1px solid black; */
-}
+
 
 .h2-style{
     font-weight: 300;
@@ -117,41 +264,9 @@ body {
 
 /****** contact form ******/
 
-#contact-me-header{
-    border: 0px;
-    font-size: xx-large
-}
 
-.field-label{
-    float:left;
-    margin-top: 25px;
-    font-size: xx-large;
-}
 
-.field-input{
-    float: right;
-    border-radius: 3px;
-    padding: 7px;
-    margin: 10px;
-    width: 50%;
-    height: 50px;
-    border: 1px solid white;
-    font-size: xx-large;
-}
 
-.field-row{
-    border-bottom: 1px solid black;
-    min-height: 100px
-}
-
-#form-content{
-    width: 40%;
-    display: inline-grid;
-    border-radius: 3px;
-    background-color: #3d552440;
-    padding: 20px;
-    height: auto
-}
 
 #contact-content{
     width: 100%;
@@ -194,28 +309,14 @@ body {
 
 #submit-form-btn{
     width: 115px;
-    font: initial;
+    font: inherit;
 }
 
 /****** home (index) page ******/
 
-.main-paragraph{
-    width: 70%;
-    padding: 100px;
-    font-size: xx-large
-}
 
-.main-content{
-    width: 50%;
-    padding: 10px;
-    /* padding-top: 30px;
-    height: 600px; 
-    margin-right: -75px */
-    display: flex;
-    align-items:flex-start;
-    flex-direction: column;
-    font-size: larger;
-}
+
+
 
 #home-page-content{
     /* width: 1000px; */
