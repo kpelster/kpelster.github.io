@@ -280,12 +280,22 @@
 }
 
 .custom-art{
-    height: 15vw;
+    height: 25vw;
 }
 
 .chem-img{
     width: 30vw;
     padding:10px;
+}
+
+.down-arrow{
+    width: 2vw;
+    cursor: pointer;
+    padding-right: 20px;
+}
+
+.portfolio-label{
+    cursor: pointer;
 }
 
 #portfolio-content{
@@ -306,7 +316,7 @@
 }
 
 .portfolio-div{
-    cursor: pointer;
+    /* cursor: pointer; */
     font-size: 2vw;
     padding:20px;
 }

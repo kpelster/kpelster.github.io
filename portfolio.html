@@ -16,7 +16,7 @@ contact.html
     <link rel="stylesheet" href="css/style.css">
     <script src="src/index.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <title>Contact Me</title>
+    <title>Portfolio</title>
 
     <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
     <script>
@@ -60,25 +60,49 @@ contact.html
     
     <div id = "portfolio-content">
 
-        <div class = "portfolio-div">Computer Science
+        <div class = "portfolio-div">
+            <div class = "portfolio-click-bar">
+                <img class = "down-arrow" src= "/images/downarrow.png">
+                <label class = "portfolio-label">Computer Science</label>
+            </div>
 
             <div id = "computer-portfolio" class = "inner-portfolio" style = "display: none;">
+                <p style = "font-size: initial">Click on the github logo to view the project</p>
                 <div class = "portfolio-inner-div">
-
+                    <a href = "https://github.com/kpelster/Family-Binary-Tree">
+                        <img href = "https://github.com/kpelster/Family-Binary-Tree" class = "footer-logo" src = "/images/github-logo.png">
+                    </a>
+                    <p style = "font-size: initial">For a course in Data Structures, I played off of the binary tree data structure to create 
+                        a binary tree that represented a Family Tree
+                    </p>
                 </div>
                 
                 <div class = "portfolio-inner-div">
-                    
+                    <a href = "https://github.com/kpelster/Shell">
+                        <img href = "https://github.com/kpelster/Shell" class = "footer-logo" src = "/images/github-logo.png">
+                    </a>
+                    <p style = "font-size: initial">This is a project for an Operating Systems class where we were to make a bash shell from scratch using C. 
+                    </p>
                 </div>
     
                 <div class = "portfolio-inner-div">
+                    <a href = "https://github.com/kpelster/ImageManipulate">
+                        <img href = "https://github.com/kpelster/ImageManipulate" class = "footer-logo" src = "/images/github-logo.png">
+                    </a>
+                        <p style = "font-size: initial">This is a project for a course in Design Vision. The project is written in Python and manipulates
+                            images by iterating pixels and computing core methods such as Gaussian Blur, Perspective Transformation, and Affine Transformation.
+                        </p>
                     
                 </div>
             </div>
             
         </div>
 
-        <div class = "portfolio-div" >Chemical Engineering / Materials Science
+        <div class = "portfolio-div">
+            <div class = "portfolio-click-bar">
+                <img class = "down-arrow" src= "/images/downarrow.png">
+                <label class = "portfolio-label">Chemical Engineering / Materials Science</label> 
+            </div>
 
             <div id = "chemistry-portfolio" class = "inner-portfolio" style = "display: none;">
                 <div class = "portfolio-inner-div">
@@ -116,16 +140,29 @@ contact.html
            
         </div>
 
-        <div class = "portfolio-div">Custom Art
+        <div class = "portfolio-div">
+
+            <div class = "portfolio-click-bar">
+                <img class = "down-arrow" src= "/images/downarrow.png">
+                <label class = "portfolio-label">Custom Art</label> 
+            </div>
             
             <div id = "art-portfolio" class = "inner-portfolio" style = "display: none;">
-                <img src = "images/hand-guitar-2.jpg" class = "custom-art">
-                <img src = "images/hand-guitar.jpeg" class = "custom-art">
+                <p style = "font-size: initial">I make custom charcoal drawings by hand. It is my creative release
+                    outside of work and school. I have investigated with other mediums
+                    such as acrylic and pastels, but Charcoal is my favorite.
+                    Below is a sampling of some of my work.
+                </p>
+                <img src = "images/hand-guitar-2.jpg" class = "custom-art" alt = "Hand playing guitar">
+                <img src = "images/hand-guitar.jpeg" class = "custom-art" alt = "Hand playing guitar">
                 <br>
-                <img src = "images/profile.jpg" class = "custom-art">
-                <img src = "images/stairs.jpg" class = "custom-art">
-                <img src = "images/blurry-face.jpg" class = "custom-art">
-                <img src = "images/incomplete-face.jpg" class = "custom-art">
+                <img src = "images/profile.jpg" class = "custom-art" alt = "Profile of a man">
+                <img src = "images/incomplete-face.jpg" class = "custom-art" alt = "Incomplete face">
+                
+                <br>
+                <img src = "images/blurry-face.jpg" class = "custom-art" alt = "Scribbled face of a man">
+                <img src = "images/stairs.jpg" class = "custom-art" alt = "Stairs">
+                <img src = "images/hand.png" class = "custom-art" alt = "Hand with smoke">
             </div>
 
             

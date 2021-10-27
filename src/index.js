@@ -45,8 +45,10 @@ window.onload = function () {
 
     }
 
-    $(".portfolio-div").on("click", function(){
-        $($(this)[0].children[0]).slideToggle();
+    $(".portfolio-click-bar").on("click", function(){
+        console.log($(this)[0])
+        // $($(this)[0].children[1]).slideToggle();
+        $($(this)[0].parentElement.children[1]).slideToggle();
     })
 
     //  mouseenter mouseleave
