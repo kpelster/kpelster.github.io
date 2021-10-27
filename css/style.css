@@ -512,3 +512,7 @@
     font-size: 2vw;
     padding-left: 4vw;
 }
+
+.chem-des{
+    align-items: flex-start;
+}
