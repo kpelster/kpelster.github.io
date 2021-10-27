@@ -51,7 +51,7 @@ window.onload = function () {
      * method to open/close portfolio slide divs
      */
     $(".portfolio-click-bar").on("click", function () {
-        
+
         // selects next child in parent div
         $($(this)[0].parentElement.children[1]).slideToggle();
     })
@@ -171,33 +171,33 @@ window.onload = function () {
         // make 'xx@yy.zz to [xx, yy.zz]
         try {
             email = email.split("@");
-            
+
             console.log(email);
 
-            if(email.length>2 || checkSpecialChars(email[0]) || checkSpecialChars(email[1])){
+            if (email.length > 2 || checkSpecialChars(email[0]) || checkSpecialChars(email[1])) {
                 valid = false;
                 validEmail = false;
             }
 
-            else{
+            else {
                 domains = email[1];
                 //  make yy.zz to [yy, zz]
                 domains = domains.split(".");
-    
+
                 domain = domains[0].toUpperCase();
                 tpDomain = domains[1].toUpperCase();
-    
+
                 foundDomain = compareDomain(domain);
                 foundTPDomain = compareDomain(tpDomain);
-    
+
                 console.log(domain, tpDomain);
-    
+
                 if (!(foundDomain || foundTPDomain)) {
                     valid = false;
                     validEmail = false;
-    
+
                 }
-            }  
+            }
         }
 
         catch {
