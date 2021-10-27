@@ -5,6 +5,7 @@
     justify-content: center;
     /* align-items: center; */
     flex-direction: column;
+    padding-top: 2vw;
     }
 
     .self-image{
@@ -20,7 +21,7 @@
         /* width: 155px; */
         justify-content: center;
         border: 0px;
-        font-size:3vw;
+        font-size:2.5vw;
         margin:5px
     }
 
@@ -75,6 +76,51 @@
         /* position: absolute; */
     }
 
+    #portfolio-content{
+        width: 100%;
+    }
+
+    .portfolio-label{
+        cursor: pointer;
+        font-size: 5vw;
+    }
+
+    .chem-img{
+        width: 90%;
+        padding:10px;
+    }
+
+    .portfolio-inner-div{
+        display: flex;
+        flex-direction: column;
+        border-bottom: 1px solid rgb(237 239 235);
+        padding: 10px;
+    }
+
+    .custom-art{
+        width: 100%;
+        padding: 10px;
+    }
+
+    #custom-img-div{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .cs-portfolio-par{
+        display: flex;
+        align-items: center;
+        font-size: 2.5vw;
+    }
+
+    .portfolio-div{
+        /* cursor: pointer; */
+        font-size: 2.5vw;
+        padding:20px;
+    }
+
 }
     
     body {
@@ -107,7 +153,8 @@
         flex-direction: row;
         width: 95%;
         height: 100%;
-        font-size: xx-large;
+        padding-top: 2vw;
+        /* font-size: xx-large; */
     }
 
     .self-image{
@@ -127,7 +174,7 @@
         justify-content: center;
         border: 0px;
         height: 50px;
-        font-size:xx-large;
+        font-size:2.5vw;
         margin:5px
     }
 
@@ -140,13 +187,13 @@
         display: flex;
         align-items:flex-start;
         flex-direction: column;
-        font-size: larger;
+        /* font-size: larger; */
     }
 
     .main-paragraph{
         width: 70%;
         padding-left: 50px;
-        font-size: x-large
+        font-size: 1.75vw;
     }
 
     #form-content{
@@ -189,6 +236,47 @@
         display: inline-grid;
         padding-top: 25px;
     } */
+
+    #portfolio-content{
+        width: 90%;
+    }
+
+    .portfolio-label{
+        cursor: pointer;
+        font-size: 3vw;
+    }
+
+    .chem-img{
+        width: 30vw;
+        padding:10px;
+    }
+
+    .portfolio-inner-div{
+        display: flex;
+        flex-direction: row;
+        border-bottom: 1px solid rgb(237 239 235);
+    }
+
+    .custom-art{
+        height: 25vw;
+        width: unset;
+    }
+
+    #custom-img-div{
+        display: table
+    }
+
+    .cs-portfolio-par{
+        display: flex;
+        align-items: center;
+        font-size: 1.5vw;
+    }
+
+    .portfolio-div{
+        /* cursor: pointer; */
+        font-size: 1.5vw;
+        padding:20px;
+    }
   }
 
   .h1-style{
@@ -241,7 +329,7 @@
 .footer-logo{
     width: 6vw;
     height: 6vw;
-    padding: 1vw;
+    padding: 3vw;
 }
 
 .links-extension{
@@ -268,38 +356,21 @@
 
 .footer{
     border-top: thin solid rgb(164 193 110); 
-    width: 95%;
+    width: 90%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    font-size: xx-large;
+    font-size: 2vw;
     font-weight: 300;
     padding: 20px;
     margin-top: 10px;
-}
-
-.custom-art{
-    height: 25vw;
-}
-
-.chem-img{
-    width: 30vw;
-    padding:10px;
 }
 
 .down-arrow{
     width: 2vw;
     cursor: pointer;
     padding-right: 20px;
-}
-
-.portfolio-label{
-    cursor: pointer;
-}
-
-#portfolio-content{
-    width: 70%;
 }
 
 /* polaroid */
@@ -313,16 +384,6 @@
 .polaroid-words{
     margin-top:-5px; 
     margin-bottom:-5px
-}
-
-.portfolio-div{
-    /* cursor: pointer; */
-    font-size: 2vw;
-    padding:20px;
-}
-
-.portfolio-inner-div{
-    display: flex;
 }
 
 .polaroid {
@@ -445,4 +506,9 @@
 
 #aboutMe-selfImage{
     margin-top: -300px;
+}
+
+#cs-prof-intro{
+    font-size: 2vw;
+    padding-left: 4vw;
 }

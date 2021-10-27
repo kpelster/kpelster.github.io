@@ -45,7 +45,7 @@ window.onload = function () {
 
     }
 
-    $(".portfolio-click-bar").on("click", function(){
+    $(".portfolio-click-bar").on("click", function () {
         console.log($(this)[0])
         // $($(this)[0].children[1]).slideToggle();
         $($(this)[0].parentElement.children[1]).slideToggle();
@@ -164,24 +164,35 @@ window.onload = function () {
         // make 'xx@yy.zz to [xx, yy.zz]
         try {
             email = email.split("@");
-            domains = email[1];
-            //  make yy.zz to [yy, zz]
-            domains = domains.split(".");
+            
+            console.log(email);
 
-            domain = domains[0].toUpperCase();
-            tpDomain = domains[1].toUpperCase();
-
-            foundDomain = compareDomain(domain);
-            foundTPDomain = compareDomain(tpDomain);
-
-            console.log(domain, tpDomain);
-
-            if (!(foundDomain || foundTPDomain)) {
+            if(email.length>2 || checkSpecialChars(email[0]) || checkSpecialChars(email[1])){
                 valid = false;
                 validEmail = false;
-
             }
+
+            else{
+                domains = email[1];
+                //  make yy.zz to [yy, zz]
+                domains = domains.split(".");
+    
+                domain = domains[0].toUpperCase();
+                tpDomain = domains[1].toUpperCase();
+    
+                foundDomain = compareDomain(domain);
+                foundTPDomain = compareDomain(tpDomain);
+    
+                console.log(domain, tpDomain);
+    
+                if (!(foundDomain || foundTPDomain)) {
+                    valid = false;
+                    validEmail = false;
+    
+                }
+            }  
         }
+
         catch {
             valid = false;
             validEmail = false;
@@ -203,12 +214,12 @@ window.onload = function () {
      */
     function validateMessage() {
         var valid = true;
-        document.getElementById("user_message").style.border = "0px";
+        document.getElementById("user-message").style.border = "0px";
 
-        if (document.getElementById("user_message").value == "") {
+        if (document.getElementById("user-message").value == "") {
             valid = false;
-            document.getElementById("user_message").style.border = "1px solid red";
-            document.getElementById("user_message").placeholder = "Required";
+            document.getElementById("user-message").style.border = "1px solid red";
+            document.getElementById("user-message").placeholder = "Required";
         }
         console.log("message", valid);
         return valid;
@@ -245,6 +256,13 @@ window.onload = function () {
         }
 
         return found;
+    }
+
+    function checkSpecialChars(string) {
+        if (/^[a-zA-Z0-9-. ]*$/.test(string) == false) {
+            return true;
+        }
+        return false;
     }
 }
 
