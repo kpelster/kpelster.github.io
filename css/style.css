@@ -285,6 +285,7 @@
 
 .chem-img{
     width: 30vw;
+    padding:10px;
 }
 
 #portfolio-content{
@@ -308,6 +309,10 @@
     cursor: pointer;
     font-size: 2vw;
     padding:20px;
+}
+
+.portfolio-inner-div{
+    display: flex;
 }
 
 .polaroid {
