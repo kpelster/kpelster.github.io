@@ -41,7 +41,8 @@
         background-color: #3d552440;
         padding: 20px;
         margin:10px;
-        height: auto
+        height: auto;
+        width: 90%;
     }
 
     #contact-me-header{
@@ -52,7 +53,7 @@
     .field-label{
         float:left;
         margin-top: 20px;
-        font-size: x-small;
+        font-size: 2vw;
     }
     
     .field-input{
@@ -63,7 +64,7 @@
         width: 50%;
         /* height: 50px; */
         border: 1px solid white;
-        /* font-size: xx-large; */
+        font-size: 3vw;
     }
     
     .field-row{
@@ -213,7 +214,7 @@
     .field-label{
         float:left;
         margin-top: 25px;
-        font-size: xx-large;
+        /* font-size: xx-large; */
     }
     
     .field-input{
