@@ -1,7 +1,7 @@
 /**
  * Kara Pelster
  * CISC474
- * Personal Webpage 2
+ * Personal Webpage 3
  * index.js
  **/
 
@@ -10,6 +10,8 @@ var emailDomains;
 var linksopen = false;
 
 window.onload = function () {
+
+    emailjs.init("user_j39dx3RjcjMv4ltxbuxv2");
 
     // make call to domains url
     callDomains();
@@ -45,13 +47,18 @@ window.onload = function () {
 
     }
 
+    /**
+     * method to open/close portfolio slide divs
+     */
     $(".portfolio-click-bar").on("click", function () {
-        console.log($(this)[0])
-        // $($(this)[0].children[1]).slideToggle();
+        
+        // selects next child in parent div
         $($(this)[0].parentElement.children[1]).slideToggle();
     })
 
-    //  mouseenter mouseleave
+    /**
+     * method to open/close class links
+     */
     $(".class-links").on("click mouseenter mouseleave", function (e) {
 
         if (($(".links-div").css("display") == "none" && e.type != "mouseleave") || e.type == "mouseenter") {
@@ -258,6 +265,11 @@ window.onload = function () {
         return found;
     }
 
+    /**
+     * method to check if a string has special characters
+     * @param {string} string 
+     * @returns bool 
+     */
     function checkSpecialChars(string) {
         if (/^[a-zA-Z0-9-. ]*$/.test(string) == false) {
             return true;

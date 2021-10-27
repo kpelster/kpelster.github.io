@@ -1,9 +1,10 @@
+/********** mobile view **********/
 @media only screen and (min-width: 0px) {
+
     .page-content {
         display: flex;
     align-items: flex-start;
     justify-content: center;
-    /* align-items: center; */
     flex-direction: column;
     padding-top: 2vw;
     }
@@ -18,7 +19,6 @@
         background-color: white;
         border-radius: 3px;
         text-decoration: none !important;
-        /* width: 155px; */
         justify-content: center;
         border: 0px;
         font-size:2.5vw;
@@ -26,13 +26,9 @@
     }
 
     .main-content{
-        /* padding-top: 30px;
-        height: 600px; 
-        margin-right: -75px */
         display: flex;
         align-items:flex-start;
         flex-direction: column;
-        /* font-size: larger; */
     }
 
     #form-content{
@@ -62,7 +58,6 @@
         padding: 7px;
         margin: 10px;
         width: 50%;
-        /* height: 50px; */
         border: 1px solid white;
         font-size: 3vw;
     }
@@ -73,8 +68,6 @@
 
     .class-links{
         display: inline;
-        /* padding-top:5px; */
-        /* position: absolute; */
     }
 
     #portfolio-content{
@@ -117,7 +110,6 @@
     }
 
     .portfolio-div{
-        /* cursor: pointer; */
         font-size: 2.5vw;
         padding:20px;
     }
@@ -129,8 +121,6 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    /* font-family: system-ui; */
-    /* background-image: url(../images/pelster_custom_background.png); */
     background-size: 100%;
     width: 100%;
     border-radius: 5px;
@@ -141,11 +131,7 @@
     
 }
 
-/****** classes ******/
-
-/* page layout */
-
-
+/********* desktop view *********/
 @media only screen and (min-width: 961px) {
     .page-content {
         display: flex;
@@ -155,13 +141,11 @@
         width: 95%;
         height: 100%;
         padding-top: 2vw;
-        /* font-size: xx-large; */
     }
 
     .self-image{
         width: 50%;
     }
-    /* button formats */
 
     .btn-formatting {
         color: black;
@@ -171,7 +155,6 @@
         padding-right: 20px;
         border-radius: 3px;
         text-decoration: none !important;
-        /* width: 155px; */
         justify-content: center;
         border: 0px;
         height: 50px;
@@ -182,13 +165,9 @@
     .main-content{
         width: 50%;
         padding: 10px;
-        /* padding-top: 30px;
-        height: 600px; 
-        margin-right: -75px */
         display: flex;
         align-items:flex-start;
         flex-direction: column;
-        /* font-size: larger; */
     }
 
     .main-paragraph{
@@ -214,7 +193,6 @@
     .field-label{
         float:left;
         margin-top: 25px;
-        /* font-size: xx-large; */
     }
     
     .field-input{
@@ -232,11 +210,6 @@
         border-bottom: 1px solid black;
         min-height: 100px
     }
-
-    /* .class-links{
-        display: inline-grid;
-        padding-top: 25px;
-    } */
 
     #portfolio-content{
         width: 90%;
@@ -274,25 +247,22 @@
     }
 
     .portfolio-div{
-        /* cursor: pointer; */
         font-size: 1.5vw;
         padding:20px;
     }
   }
 
-  .h1-style{
+/********** css for both mobile and desktop **********/
+
+.h1-style{
     font-weight: 300;
-    /* letter-spacing: 1px; */
-    /* border-bottom: 1px solid black; */
 }
 
 .page-nav-ribbon{
     background-color: white;
     padding: 5px;
     border-radius: 3px;
-    /* width: max-content; */
     width: 100%;
-    /* max-height: 300px; */
     height:20%;
     display: flex;
     flex-direction: column;
@@ -307,22 +277,13 @@
     height:70%;
     font-size:xx-large
 }
-/* 
-.class-extra-links{
-    border: 1px solid #f3f2f2;
-    padding: 0px;
-} */
-
-
 .nav-name{
-    /* height: 50%; */
     width: 40%;
 }
 
 .links-div{
     display: flex;
     flex-direction: column;
-    /* border: 1px solid #f3f2f2; */
     border-radius: 5px;
     position: absolute;
 }
@@ -351,7 +312,6 @@
 }
 .btn-formatting:hover {
     cursor: pointer;
-    /* box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.1), 4px 0 0 0 rgba(0, 0, 0, 0.1); */
     color: rgb(164 193 110)
 }
 
@@ -374,49 +334,11 @@
     padding-right: 20px;
 }
 
-/* polaroid */
-
 .personal-photo {
     margin:5px;
     width: 30%;
     height: 30%;
 }
-
-.polaroid-words{
-    margin-top:-5px; 
-    margin-bottom:-5px
-}
-
-.polaroid {
-    /* transform: rotate(-10deg);
-    width: 400px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
-}
-
-/****** header styles ******/
-
-
-
-.h2-style{
-    font-weight: 300;
-    letter-spacing: 1px; 
-}
-
-.h3-style{
-    font-weight: 200; 
-    letter-spacing: 1px
-}
-
-.ul-style{
-    font-family:system-ui;
-    letter-spacing: 1px
-}
-
-/****** contact form ******/
-
-
-
-
 
 #contact-content{
     width: 100%;
@@ -462,14 +384,7 @@
     font: inherit;
 }
 
-/****** home (index) page ******/
-
-
-
-
-
 #home-page-content{
-    /* width: 1000px; */
     width: 95%;
     height: 100%;
     font-size: xx-large;
@@ -486,12 +401,8 @@
     margin-top: 25px;
 }
 
-/****** aboutMe page  ******/
-
 #aboutMe-main-content {
-    /* height: 900px;  */
     width: 400px;
-    /* margin-right: -75px; */
     padding: 10px;
     padding-top: 30px;
 }
