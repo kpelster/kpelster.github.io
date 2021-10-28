@@ -11,6 +11,12 @@ var linksopen = false;
 
 window.onload = function () {
 
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-8MW5T55LCS');
+
     emailjs.init("user_j39dx3RjcjMv4ltxbuxv2");
 
     // make call to domains url
