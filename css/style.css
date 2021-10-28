@@ -1,18 +1,7 @@
 /********** mobile view **********/
 @media only screen and (min-width: 0px) {
 
-    .page-content {
-        display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    flex-direction: column;
-    padding-top: 2vw;
-    }
-
-    .self-image{
-        width: 100%;
-    }
-
+    /* button formatting */
     .btn-formatting {
         color: black;
         display: inline-flex;
@@ -24,6 +13,15 @@
         font-size:2.5vw;
         margin:5px
     }
+    
+    /* general page formatting */
+    .page-content {
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        flex-direction: column;
+        padding-top: 2vw;
+        }
 
     .main-content{
         display: flex;
@@ -31,6 +29,11 @@
         flex-direction: column;
     }
 
+    .self-image{
+        width: 100%;
+    }
+
+    /* contact form */
     #form-content{
         display: inline-grid;
         border-radius: 3px;
@@ -69,6 +72,8 @@
     .class-links{
         display: inline;
     }
+
+    /* portfolio */
 
     #portfolio-content{
         width: 100%;
@@ -133,20 +138,8 @@
 
 /********* desktop view *********/
 @media only screen and (min-width: 961px) {
-    .page-content {
-        display: flex;
-        align-items: flex-start;
-        justify-content: center;
-        flex-direction: row;
-        width: 95%;
-        height: 100%;
-        padding-top: 2vw;
-    }
-
-    .self-image{
-        width: 50%;
-    }
-
+    
+    /* button formatting */
     .btn-formatting {
         color: black;
         display: inline-flex;
@@ -160,6 +153,17 @@
         height: 50px;
         font-size:2.5vw;
         margin:5px
+    }
+    
+    /* general page formatting */
+    .page-content {
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        flex-direction: row;
+        width: 95%;
+        height: 100%;
+        padding-top: 2vw;
     }
 
     .main-content{
@@ -175,6 +179,12 @@
         padding-left: 50px;
         font-size: 1.75vw;
     }
+
+    .self-image{
+        width: 50%;
+    }
+
+    /* contact form  */
 
     #form-content{
         width: 40%;
@@ -210,6 +220,8 @@
         border-bottom: 1px solid black;
         min-height: 100px
     }
+
+    /* portfolio */
 
     #portfolio-content{
         width: 90%;
@@ -254,10 +266,12 @@
 
 /********** css for both mobile and desktop **********/
 
+/* header */
 .h1-style{
     font-weight: 300;
 }
 
+/* navigation ribbon */
 .page-nav-ribbon{
     background-color: white;
     padding: 5px;
@@ -270,6 +284,7 @@
     align-items: center
 }
 
+/* kara pelster name image */
 .name-nav-ribbon{
     text-align: center;
     margin: auto;
@@ -277,10 +292,12 @@
     height:70%;
     font-size:xx-large
 }
+
 .nav-name{
     width: 40%;
 }
 
+/* class links div */
 .links-div{
     display: flex;
     flex-direction: column;
@@ -288,33 +305,12 @@
     position: absolute;
 }
 
-.footer-logo{
-    width: 6vw;
-    height: 6vw;
-    padding: 3vw;
-}
-
 .links-extension{
     margin:0px;
     padding: 0px;
 }
 
-.footer-container{
-    display: flex;
-    flex-direction: row;
-}
-
-
-#about-me-images{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-}
-.btn-formatting:hover {
-    cursor: pointer;
-    color: rgb(164 193 110)
-}
-
+/* footer */
 .footer{
     border-top: thin solid rgb(164 193 110); 
     width: 90%;
@@ -328,6 +324,28 @@
     margin-top: 10px;
 }
 
+/* footer container fit */
+.footer-container{
+    display: flex;
+    flex-direction: row;
+}
+
+
+/* footer logos for social media */
+.footer-logo{
+    width: 6vw;
+    height: 6vw;
+    padding: 3vw;
+}
+
+/* change color on hover of buttons */
+.btn-formatting:hover {
+    cursor: pointer;
+    color: rgb(164 193 110)
+}
+
+
+
 .down-arrow{
     width: 2vw;
     cursor: pointer;
@@ -340,6 +358,14 @@
     height: 30%;
 }
 
+#about-me-images{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+
+/* contact form */
 #contact-content{
     width: 100%;
     display: flex;
@@ -394,37 +420,13 @@
     font-size: larger;
 }
 
-#home-polaroid-div{
-    padding: 30px; 
-    margin-right: 75px; 
-    margin-bottom: 50px;
-    margin-top: 25px;
-}
-
-#aboutMe-main-content {
-    width: 400px;
-    padding: 10px;
-    padding-top: 30px;
-}
-
-#aboutMe-column{
-    width: 500px;
-}
-
-#aboutMe-polaroid{
-    padding: 30px; 
-    margin-right: 75px;
-}
-
-#aboutMe-selfImage{
-    margin-top: -300px;
-}
-
+/* computer science projects intro */
 #cs-prof-intro{
     font-size: 2vw;
     padding-left: 4vw;
 }
 
+/* description for chemical enginerring div */
 .chem-des{
     align-items: flex-start;
 }
